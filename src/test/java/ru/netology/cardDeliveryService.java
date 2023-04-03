@@ -2,20 +2,24 @@ package ru.netology;
 
 import org.junit.jupiter.api.Test;
 import com.codeborne.selenide.Configuration;
+
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
+
 import java.time.Duration;
+
 import static com.codeborne.selenide.Condition.appear;
+
 import com.codeborne.selenide.Condition;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-
 
 
 public class cardDeliveryService {
 
 
-    public String dataGenerator(int days){
+    public String dataGenerator(int days) {
         return LocalDate.now().plusDays(days).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
     }
 
